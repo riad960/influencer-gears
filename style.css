@@ -7,6 +7,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  /* overflow: hidden; */
   /* background: #aaaaaa; */
 }
 a {
@@ -21,6 +22,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .logo {
   font-size: 25px;
@@ -46,6 +48,16 @@ a {
 .nav-items li a:hover {
   background: #3a3a3a;
   color: white;
+}
+.navbar input {
+  display: none;
+}
+.navbar label {
+  display: none;
+  position: absolute;
+
+  left: 20px;
+  font-size: 30px;
 }
 /* navbar ends  */
 
@@ -89,17 +101,18 @@ a {
 }
 .right-side {
   padding: 70px;
-  position: relative;
+  background: url(./images/Circle\ design.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .right-side img {
-  position: absolute;
+  width: 100%;
 }
 /* hero section ends  */
 .banner {
   display: grid;
   padding: 30px 0;
   grid-template-columns: repeat(7, 1fr);
-  /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); */
   border-top: 1.4px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1.4px solid rgba(0, 0, 0, 0.1);
 }
@@ -161,6 +174,7 @@ a {
   font-weight: 600;
 }
 /* login section  */
+
 .form-input {
   background: none;
   display: block;
@@ -243,4 +257,72 @@ a {
 }
 .footer-icons a:hover {
   transform: rotate(25deg);
+}
+@media (max-width: 900px) {
+  .hero-section {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr;
+  }
+  .left-side {
+    padding-left: 20px;
+    margin: 0 auto;
+    order: 2;
+    align-items: center;
+  }
+  .banner {
+    margin-top: 360px;
+  }
+  .see-more {
+    justify-content: center;
+  }
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 20px;
+  }
+  .right-side {
+    margin: 20px auto;
+  }
+  .nav-items li img {
+    display: none;
+  }
+  .navbar label {
+    display: block;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  .nav-items li {
+    padding: 10px 0;
+  }
+  #toggle:checked ~ .nav-items {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .banner {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 30px;
+    margin-top: 200px;
+  }
+  .form-input {
+    width: 200px;
+  }
+  .form-input:focus {
+    width: 280px;
+  }
+  .left-side h1 {
+    text-align: center;
+    font-size: 30px;
+  }
 }
