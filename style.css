@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -97,4 +97,25 @@ a {
   /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); */
   border-top: 1.4px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1.4px solid rgba(0, 0, 0, 0.1);
+}
+/* products section starts  */
+.products {
+}
+.products h2 {
+  text-align: center;
+  color: #3a3a3a;
+  margin: 30px 0;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), -4px -4px 4px rgba(0, 0, 0, 0.25); */
+  padding: 20px 16px;
+  border-radius: 7px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
